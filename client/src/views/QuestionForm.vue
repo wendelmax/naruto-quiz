@@ -6,13 +6,8 @@
       <input type="text" v-model="question.text" required /><br />
 
       <h3>Opções:</h3>
-      <OptionInput
-        v-for="(option, index) in question.options"
-        :key="index"
-        :option="option"
-        @update:option="updateOption(index, $event)"
-        @remove="removeOption(index)"
-      />
+      <OptionInput v-for="(option, index) in question.options" :key="index" :option="option"
+        @update:option="updateOption(index, $event)" @remove="removeOption(index)" />
 
       <button @click.prevent="addOption">Adicionar Opção</button><br /><br />
 
@@ -75,27 +70,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-h2 {
-  color: #e94e1b;
-}
-label {
-  font-weight: bold;
-}
-input,
-select {
-  margin-bottom: 10px;
-  width: 100%;
-}
-button {
-  background-color: #e94e1b;
-  color: #fff;
-  padding: 5px 10px;
-  border: none;
-  cursor: pointer;
-}
-hr {
-  margin: 10px 0;
-}
-</style>
