@@ -1,5 +1,3 @@
-// Boas práticas aplicadas: modularização de código, melhor tratamento de erros, refatoração de lógica redundante e clareza de funções
-
 const express = require("express");
 const cors = require("cors");
 const db = require("./models");

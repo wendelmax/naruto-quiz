@@ -67,17 +67,3 @@ export default {
   },
 };
 </script>
-
-
-<style scoped>
-h2 {
-  color: #e94e1b;
-}
-button {
-  background-color: #e94e1b;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
-</style>

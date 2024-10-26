@@ -1,0 +1,98 @@
+:root {
+  --orange: #f97f17; /* Uniforme do Naruto */
+  --blue-dark: #1c4b82; /* Bandana */
+  --dark-gray: #2b2b2b; /* Fundo neutro */
+  --red-dark: #b52d2d; /* Sharingan */
+}
+nav {
+  background-color: #e94e1b;
+  padding: 10px;
+}
+
+nav a {
+  color: var(--red-dark);
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Bangers', cursive;
+  color: var(--orange);
+  text-shadow: 2px 2px 0px #000;
+}
+
+@keyframes chakra-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 5px #1c4b82,
+      0 0 15px var(--blue-dark);
+  }
+  50% {
+    box-shadow:
+      0 0 20px #1c4b82,
+      0 0 40px var(--blue-dark);
+  }
+}
+
+/* Componentes Específicos */
+.character-profile-card {
+  background-color: #333;
+  border: 3px solid var(--orange);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+}
+
+.abilities-chart {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+
+.ability {
+  background-color: var(--red-dark);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.ability:hover {
+  background-color: var(--orange);
+}
+
+.quiz-container {
+  border: 5px solid brown;
+  background: rgba(255, 255, 255, 0.812);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.quiz-container h2 {
+  text-align: center;
+  color: var(--red-dark);
+}
+
+/* Animação de Transição */
+@keyframes substitution-jutsu {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.transition-container {
+  animation: substitution-jutsu 0.5s ease-in-out;
+}

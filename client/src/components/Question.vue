@@ -2,11 +2,7 @@
   <div>
     <p>{{ question.id }}. {{ question.text }}</p>
     <div v-for="option in question.Options" :key="option.id">
-      <Option
-        :option="option"
-        :questionId="question.id"
-        v-model="selectedOption"
-      />
+      <Option :option="option" :questionId="question.id" v-model="selectedOption" />
     </div>
   </div>
 </template>
@@ -43,9 +39,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-p {
-  font-weight: bold;
-}
-</style>

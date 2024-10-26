@@ -1,18 +1,17 @@
 <template>
-  <div>
+  <div class="quiz-container section-background transition-container">
     <h1>Qual personagem de Naruto é você?</h1>
     <ProgressBar :progress="progress" />
 
     <!-- Exibir cada pergunta usando o componente Question -->
-    <Question
-      v-for="question in questions"
-      :key="question.id"
-      :question="question"
-      v-model="answers[question.id]"
-    />
+    <div class="card mt-4" v-for="question in questions" :key="question.id">
+      <div class="card-body">
+        <Question :question="question" v-model="answers[question.id]" />
+      </div>
+    </div>
 
     <!-- Botão para calcular o resultado -->
-    <button @click="calculateResult">Ver Resultado</button>
+    <button class="btn mt-4" @click="calculateResult">Ver Resultado</button>
   </div>
 </template>
 
@@ -152,13 +151,33 @@ export default {
 </script>
 
 <style scoped>
-/* Estilos opcionais */
+.quiz-container {
+  max-width: 1024px;
+  margin: auto;
+  padding: 20px;
+}
+
+.card {
+  background-color: var(--light-gray);
+  color:orangered;
+  margin-bottom: 20px;
+}
+
 h1 {
   color: #e94e1b;
   text-align: center;
 }
+
 button {
   background-color: #e94e1b;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #962904;
   color: #fff;
   padding: 10px 20px;
   border: none;

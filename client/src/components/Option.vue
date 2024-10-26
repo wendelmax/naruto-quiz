@@ -40,10 +40,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-label {
-  display: block;
-  margin-bottom: 10px;
-}
-</style>

@@ -8,12 +8,8 @@
       <label>Descrição:</label>
       <textarea v-model="character.description" required></textarea><br />
 
-      <AbilityInput
-        v-for="(ability, index) in abilities"
-        :key="index"
-        :label="ability.label"
-        v-model="character[ability.key]"
-      />
+      <AbilityInput v-for="(ability, index) in abilities" :key="index" :label="ability.label"
+        v-model="character[ability.key]" />
 
       <button type="submit">Cadastrar</button>
     </form>
@@ -79,25 +75,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-/* Estilos opcionais */
-h2 {
-  color: #e94e1b;
-}
-label {
-  font-weight: bold;
-}
-input,
-textarea {
-  margin-bottom: 10px;
-  width: 100%;
-}
-button {
-  background-color: #e94e1b;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
-</style>
